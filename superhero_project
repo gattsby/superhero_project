@@ -1,5 +1,26 @@
 public class Main {
-    public static void (String[] args) {
+    public static int calculatePunchDamage(int strength) {//this determines how much the villain's health will decrease per attack.
+        return strength * 2;
+    }
 
+    public static int calculateSpecialAttackDamage (int strength, String attackType) {//similar to the above int, this one changes the output due to the string attackType, it's a stat modifier just as a part of the code.
+        int damage = strength;
+        if (attackType.equals("Fire Punch")) {
+            damage = damage * 3;
+        } else if (attackType.equals("Ice Blast")) {
+            damage = damage * 2;
+        }
+        return damage;
+    }
+    public static void main(String[] args) {
+
+        // this is going to be the villain's starting health, and each attack from the user will deplete it until it reaches 0
+        int villainHealth = 100;
+        /* this is the amount of health that will be subtracted from the villain's health per normal attack */
+        int punchStrength = 20;
+        String attackType = "Fire Punch";
+
+        int damageByPunch = villainHealth - calculatePunchDamage(punchStrength); //calculates the villain health before the punch, and subtracts the amount of health equal to the damage set previously
+        int damageBySpecialAttack = villainHealth - calculateSpecialAttackDamage(punchStrength, attackType); //like the previous command, this takes the villain health and subtracts however much health that is equal to the special attack damage
     }
 }

@@ -1,2 +1,2 @@
-# superhero_project
-a small Java project that was part of a Coursera course I'm currently in
+# Coursera Amazon Sofware Developer "Passing Arguments to Methods: Superhero Project"
+This project was part of my learning in Module 3 of the Amazon Software Developer course on coursera. It's main objective was to help understand methods better and how you can create arguments to get different outputs. The example the video used was a superhero game, which you'll be able to tell from the code itself.
